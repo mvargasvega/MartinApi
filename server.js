@@ -49,8 +49,8 @@ app.get('/api', function apiIndex(req, res) {
   res.json({
     woopsIForgotToDocumentAllMyEndpoints: true, // CHANGE ME ;)
     message: "Welcome to my personal api! Here's what you need to know!",
-    documentationUrl: "https://github.com/example-username/express-personal-api/README.md", // CHANGE ME
-    baseUrl: "http://YOUR-APP-NAME.herokuapp.com", // CHANGE ME
+    documentationUrl: "https://github.com/mvargasvega/MartinApi/blob/master/README.md",
+    baseUrl: "https://secure-refuge-11585.herokuapp.com/",
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
       {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
@@ -58,6 +58,19 @@ app.get('/api', function apiIndex(req, res) {
     ]
   })
 });
+
+app.get("/api/profile", function apiIndex(req, res) {
+  res.json({
+    name: "Maritn Vargas Vega",
+    githubUsername: "mvargasvega",
+    githublink: "https://github.com/mvargasvega/MartinApi",
+    githubProfileImage: "https://avatars0.githubusercontent.com/u/29615926?s=460&v=4",
+    personalSiteLink: "Coming soon, need to buy the domain and set it up =o",
+    currentCity: "San Francisco",
+    hobbies: [{name: "Dance", type: "Bachata & Salsa"},{name:"Traveling", type:"Africa & Europe"},{name:"Sleeping", type:"Until at least 9 =D"}]
+
+  })
+} )
 
 /**********
  * SERVER *
