@@ -64,7 +64,7 @@ app.get('/api', function apiIndex(req, res) {
 
 app.get("/api/profile", function apiIndex(req, res) {
   res.json({
-    name: "Maritn Vargas Vega",
+    name: "Martin Vargas Vega",
     githubUsername: "mvargasvega",
     githublink: "https://github.com/mvargasvega/MartinApi",
     githubProfileImage: "https://avatars0.githubusercontent.com/u/29615926?s=460&v=4",
@@ -78,7 +78,7 @@ app.get("/api/profile", function apiIndex(req, res) {
 
 
 //LIST -- Fetch all projects
-app.get('/projects', function(req,res){
+app.get('/Project', function(req,res){
   db.Projects.find({}, function(err, Projects) {
     if (err) {
       console.log(err);
