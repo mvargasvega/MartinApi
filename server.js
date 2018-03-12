@@ -75,16 +75,16 @@ app.get("/api/profile", function apiIndex(req, res) {
 
 
 //LIST -- Fetch all projects
-app.get('/projects', function(req,res){
-  db.Projects.find({}, function(err, Projects) {
-    if (err) {
-      console.log(err);
-      res.status(400).json({ projects: 'no data'})
-    } else {
-      res.status(200).json({projects: projects});
-    }
-  })
-});
+// app.get('/projects', function(req,res){
+//   db.Projects.find({}, function(err, Projects) {
+//     if (err) {
+//       console.log(err);
+//       res.status(400).json({ projects: 'no data'})
+//     } else {
+//       res.status(200).json({projects: projects});
+//     }
+//   })
+// });
 
 /**********
  * SERVER *
