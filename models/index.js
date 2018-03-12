@@ -6,7 +6,7 @@
  * http://mongoosejs.com/docs/guide.html
 **/
 var mongoose = require('mongoose');
-var Project = require('./project');
+var Project = require('./Project');
 
 // Connect to the database
 // The name of the database will be 'todo_demo'
@@ -17,3 +17,6 @@ var Project = require('./project');
 module.exports = {
     Project : Project
   };
+
+
+  // module.exports.Project = require("./Project.js")

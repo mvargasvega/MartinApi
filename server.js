@@ -53,8 +53,11 @@ app.get('/api', function apiIndex(req, res) {
     baseUrl: "https://secure-refuge-11585.herokuapp.com/",
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
-      {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
+      {method: "GET", path: "/api/profile", description: "Data about me"},
+      {method: "GET", path: "/api/project", description: "Index of all projects"}, // CHANGE ME
+      {method: "POST", path: "/api/project", description: "Create a new project entry"}, // CHANGE ME
+      {method: "PUT", path: "/api/project/:id", description: "Edit a previous project entry and update it"}, // CHANGE ME
+      {method: "DELETE", path: "/api/project/:id", description: "Destroy a project"} // CHANGE ME
     ]
   })
 });
@@ -75,16 +78,16 @@ app.get("/api/profile", function apiIndex(req, res) {
 
 
 //LIST -- Fetch all projects
-// app.get('/projects', function(req,res){
-//   db.Projects.find({}, function(err, Projects) {
-//     if (err) {
-//       console.log(err);
-//       res.status(400).json({ projects: 'no data'})
-//     } else {
-//       res.status(200).json({projects: projects});
-//     }
-//   })
-// });
+app.get('/projects', function(req,res){
+  db.Projects.find({}, function(err, Projects) {
+    if (err) {
+      console.log(err);
+      res.status(400).json({ projects: 'no data'})
+    } else {
+      res.status(200).json({projects: projects});
+    }
+  })
+});
 
 /**********
  * SERVER *
