@@ -78,17 +78,14 @@ app.get("/api/profile", function apiIndex(req, res) {
 
 
 //LIST -- Fetch all projects
-app.get('/project', function(req,res){
-console.log("Hello MArtttt")
-  db.Project.find({}, function(err, Projects) {
-    console.log("inside if statement")
-    if (err) {
-      console.log(err);
-      res.status(400).json({ projects: 'no data'})
-    } else {
-      res.status(200).json({projects: projects});
-    }
-  })
+app.get('/api/Project', function(req,res) {
+  //send all projects as JSON response
+  console.log("I kind of work")
+  db.Project.find().populate()
+  .exec(function(err, Project){
+    if (err) { return console.log("index error: "+err); }
+    res.json(Projects);
+  });
 });
 
 /**********

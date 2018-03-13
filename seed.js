@@ -4,21 +4,46 @@
 
 var db = require('./models');
 
-// var project_list =[
-//   {
-//   name: ,
-//   description: String,
-//   githubRepoUrl: String,
-//   deployedUrl: String,
-//   screenshot: String
-// }
-// ]
+var project_list =[
+  {
+  name: "PetStagram",
+  description: "App about pets",
+  githubRepoUrl: "https://github.com/mvargasvega",
+  deployedUrl: "https://github.com/mvargasvega",
+  screenshot: "http://via.placeholder.com/350x150",
+  languages: "HTML5, CSS, Javascript, Ruby"
+  },
+  {
+  name: "Portfolio Page",
+  description: "App about pets",
+  githubRepoUrl: "https://github.com/mvargasvega",
+  deployedUrl: "https://github.com/mvargasvega",
+  screenshot: "http://via.placeholder.com/350x150",
+  languages: "HTML5, CSS, Javascript, Ruby"
+  },
+  {
+  name: "Game on a javascript grid",
+  description: "App about pets",
+  githubRepoUrl: "https://github.com/mvargasvega",
+  deployedUrl: "https://github.com/mvargasvega",
+  screenshot: "http://via.placeholder.com/350x150",
+  languages: "HTML5, CSS, Javascript, Ruby"
+  },
+  {
+  name: "Geoquakes",
+  description: "App about pets",
+  githubRepoUrl: "https://github.com/mvargasvega",
+  deployedUrl: "https://github.com/mvargasvega",
+  screenshot: "http://via.placeholder.com/350x150",
+  languages: "HTML5, CSS, Javascript, Ruby"
+  }
+];
 
-// db.Campsite.create(new_campsite, function(err, campsite){
-//   if (err){
-//     return console.log("Error:", err);
-//   }
+db.Project.create(project_list, function(err, project){
+  if (err){
+    return console.log("Error:", err);
+  }
 
-//   console.log("Created new campsite", campsite._id)
-//   process.exit(); // we're all done! Exit the program.
-// })
+  console.log("Created new project", project._id)
+  process.exit(); // we're all done! Exit the program.
+})

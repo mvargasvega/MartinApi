@@ -6,7 +6,8 @@ var ProjectSchema = new Schema({
   description: String,
   githubRepoUrl: String,
   deployedUrl: String,
-  screenshot: String
+  screenshot: String,
+  languages: String
 });
 
 var Project = mongoose.model('Project', ProjectSchema);
