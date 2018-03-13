@@ -73,13 +73,15 @@ app.get("/api/profile", function apiIndex(req, res) {
     hobbies: [{name: "Dance", type: "Bachata & Salsa"},{name:"Traveling", type:"Africa & Europe"},{name:"Sleeping", type:"Until at least 9 =D"}]
 
   })
-} )
+});
 
 
 
 //LIST -- Fetch all projects
-app.get('/Project', function(req,res){
-  db.Projects.find({}, function(err, Projects) {
+app.get('/project', function(req,res){
+console.log("Hello MArtttt")
+  db.Project.find({}, function(err, Projects) {
+    console.log("inside if statement")
     if (err) {
       console.log(err);
       res.status(400).json({ projects: 'no data'})
@@ -94,6 +96,6 @@ app.get('/Project', function(req,res){
  **********/
 
 // listen on the port that Heroku prescribes (process.env.PORT) OR port 3000
-app.listen(process.env.PORT || 3000, function () {
-  console.log('Express server is up and running on http://localhost:3000/');
+app.listen(process.env.PORT || 3015, function () {
+  console.log('Express server is up and running on http://localhost:3015/');
 });

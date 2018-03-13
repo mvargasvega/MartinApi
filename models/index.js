@@ -17,6 +17,3 @@ var Project = require('./Project');
 module.exports = {
     Project : Project
   };
-
-
-  // module.exports.Project = require("./Project.js")

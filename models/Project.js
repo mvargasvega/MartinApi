@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var ProjectSchema = new Schema ({
+var ProjectSchema = new Schema({
   name: String,
   description: String,
   githubRepoUrl: String,
